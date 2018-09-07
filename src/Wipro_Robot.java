@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 class Wipro_Robot {
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -16,10 +17,6 @@ class Wipro_Robot {
     }
 
     private static String moveRobot(int rows, int columns, String[] input3, String[] input4) {
-/*
-        String[] input3 = ip3.split("-");
-        String[] input4 = ip4.split(" ");
-*/
         int x = Integer.parseInt(input3[0]), y = Integer.parseInt(input3[1]), a, b;
         String facing = "" + input3[2], f = facing;
         System.out.println("x = " + x + ",y = " + y);
@@ -29,9 +26,9 @@ class Wipro_Robot {
             if (isTurn(op)) {
                 f = facing;
                 facing = getFacing(op, facing);
-                //System.out.println(op + " Turn \n" + f + " -> " + facing);
+                System.out.println(op + " Turn \n" + f + " -> " + facing);
             } else {
-                //System.out.println("Move");
+                System.out.println("Move");
                 switch (facing) {
                     case "N": {
                         y++;
@@ -50,7 +47,7 @@ class Wipro_Robot {
                         break;
                     }
                 }
-                //System.out.println("x = " + x + ",y = " + y);
+                System.out.println("x = " + x + ",y = " + y);
                 if (!isValid(x, y, rows, columns)) return "" + a + "-" + b + "-" + f + "-" + "ER";
             }
         }
@@ -75,7 +72,6 @@ class Wipro_Robot {
                     facing = "E";
                 else
                     facing = "W";
-
                 break;
             }
             case "E": {
