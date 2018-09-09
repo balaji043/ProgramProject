@@ -3,7 +3,7 @@ import java.util.concurrent.TimeUnit;
 
 import static java.lang.Character.*;
 
-public class SplitString {
+public class Wipro_SplitString_John {
     public static void main(String args[]) {
         long startTime = System.nanoTime();
         Split();//Splitting String into front middle end and form string of f,m,e and toggle e strings;

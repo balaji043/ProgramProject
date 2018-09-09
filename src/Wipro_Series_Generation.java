@@ -23,6 +23,5 @@ class Wipro_Series_Generation {
             }
         }
         return e[input4 - 1];
-
     }
 }
