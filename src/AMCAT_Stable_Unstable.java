@@ -9,8 +9,14 @@ public class AMCAT_Stable_Unstable {
         String s;
         for (int i = 0; i < 5; i++) {
             s = scanner.next();
-            if (isStable(s)) stable += Integer.parseInt(s);
-            else unStable += Integer.parseInt(s);
+            if (isStable(s)) {
+                stable += Integer.parseInt(s);
+                System.out.println(s + " Stable");
+            } else {
+                unStable += Integer.parseInt(s);
+                System.out.println(s + " Not Stable");
+
+            }
         }
         System.out.println(stable - unStable);
     }
@@ -26,7 +32,6 @@ public class AMCAT_Stable_Unstable {
                 break;
             }
         }
-        i = j;
         for (; i < l; i++) {
             count = 1;
             for (j = i + 1; j < l; j++) {
