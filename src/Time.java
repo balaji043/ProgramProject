@@ -7,9 +7,7 @@ class Time {
 
     public static void main(String args[]) {
         long startTime = System.nanoTime(); //Start Time Of the program
-
         int h, m, s;
-
         var scanner = new Scanner(System.in);
         h = scanner.nextInt();
         m = scanner.nextInt();
