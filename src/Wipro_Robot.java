@@ -23,7 +23,7 @@ class Robot_90_45_Movement {
         int x = Integer.parseInt(position[0]);
         int y = Integer.parseInt(position[1]);
         String facing = position[2], f;
-        String[] moves = input4.split(" ");
+        String[] moves = " ".split(input4);
         for (String move : moves) {
             a = x;
             b = y;
@@ -31,8 +31,10 @@ class Robot_90_45_Movement {
             if (isTurn(move)) {
                 facing = getFacing(move, facing);
             } else {
-                if (move.equals("M")) u = 2;
-                else u = 1;
+                if (move.equals("M"))
+                    u = 2;
+                else
+                    u = 1;
                 switch (facing) {
                     case "N": {
                         y += u;
@@ -88,106 +90,32 @@ class Robot_90_45_Movement {
     }
 
     private static String getFacing(String op, String facing) {
-        switch (facing) {
-            case "N": {
-                switch (op) {
-                    case "R":
-                        return "E";
-                    case "r":
-                        return "NE";
-                    case "L":
-                        return "W";
-                    default:
-                        return "NW";
-                }
+        String[] directions = {"N", "NE", "E", "SE", "S", "SW", "W", "NW"};
+        int i;
+        for (i = 0; i < 9; i++)
+            if (facing.equals(directions[i])) {
+                break;
             }
-            case "NE": {
-                switch (op) {
-                    case "R":
-                        return "SE";
-                    case "r":
-                        return "E";
-                    case "L":
-                        return "NW";
-                    default:
-                        return "N";
-                }
+        switch (op) {
+            case "R": {
+                if (i == 6) return "N";
+                if (i == 7) return "NE";
+                return directions[i + 2];
             }
-            case "E": {
-                switch (op) {
-                    case "R":
-                        return "S";
-                    case "r":
-                        return "SE";
-                    case "L":
-                        return "N";
-                    default:
-                        return "NE";
-                }
+            case "r": {
+                if (i == 7) return "N";
+                return directions[i + 1];
             }
-            case "SE": {
-                switch (op) {
-                    case "R":
-                        return "SW";
-                    case "r":
-                        return "S";
-                    case "L":
-                        return "NE";
-                    default:
-                        return "E";
-                }
+            case "L": {
+                if (i == 0) return "W";
+                if (i == 1) return "NW";
+                return directions[i - 2];
             }
-            case "S": {
-                switch (op) {
-                    case "R":
-                        return "W";
-                    case "r":
-                        return "SW";
-                    case "L":
-                        return "E";
-                    default:
-                        return "SE";
-                }
-            }
-            case "SW": {
-                switch (op) {
-                    case "R":
-                        return "NW";
-                    case "r":
-                        return "W";
-                    case "L":
-                        return "SE";
-                    default:
-                        return "S";
-                }
-
-            }
-            case "W": {
-                switch (op) {
-                    case "R":
-                        return "N";
-                    case "r":
-                        return "NW";
-                    case "L":
-                        return "S";
-                    default:
-                        return "SW";
-                }
-            }
-            case "NW": {
-                switch (op) {
-                    case "R":
-                        return "NE";
-                    case "r":
-                        return "N";
-                    case "L":
-                        return "SW";
-                    default:
-                        return "W";
-                }
+            default: {
+                if (i == 0) return "NW";
+                return directions[i - 1];
             }
         }
-        return "";
     }
 }
 
