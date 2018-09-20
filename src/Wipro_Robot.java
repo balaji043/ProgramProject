@@ -92,7 +92,7 @@ class Robot_90_45_Movement {
     private static String getFacing(String op, String facing) {
         String[] directions = {"N", "NE", "E", "SE", "S", "SW", "W", "NW"};
         int i;
-        for (i = 0; i < 9; i++)
+        for (i = 0; i < 8; i++)
             if (facing.equals(directions[i])) {
                 break;
             }
