@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 import static java.lang.Math.abs;
 
-public class PoliceThief {
+public class Wipro_Police_Thief {
     public static void main(String args[]) {
         thiefCatch();
     }

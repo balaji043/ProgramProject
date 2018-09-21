@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class CreatePin {
+public class Wipro_Create_Pin {
     public static void main(String[] ar) {
         int n1, n2, n3;
         Scanner scanner = new Scanner(System.in);
@@ -30,10 +30,9 @@ public class CreatePin {
                 Character.getNumericValue((b[2].charAt(0))),
                 Character.getNumericValue((c[2].charAt(0))));
         String s = "" + n1 + n2 + n3;
-        char sarr[] = s.toCharArray();
-        Arrays.sort(sarr);
-
-        return "" + sarr[s.length() - 1] + m1 + m2 + m3;
+        char arr[] = s.toCharArray();
+        Arrays.sort(arr);
+        return "" + arr[s.length() - 1] + m1 + m2 + m3;
     }
 
     private static int min(int a, int b, int c) {

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ChessCheckingMoves {
+public class TCS_Chess_Checking_Moves {
     private static char[][] chessBoard = new char[8][8];
     private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {

@@ -10,8 +10,8 @@ public class CharOccurrence {
         System.out.println(FrequentCount());
         System.out.println(FrequentChar());
         expandAlphabetOccurrenceMain();
+        System.out.println(N2_Occurrence_in_N1_Count());
     }
-
     private static int getCharOccurrence() {
         String s = scanner.next();
         char c = scanner.next().charAt(0);
@@ -120,5 +120,26 @@ public class CharOccurrence {
                 }
             }
         }
+    }
+
+    private static int N2_Occurrence_in_N1_Count() {
+        int n = scanner.nextInt(), m = scanner.nextInt(), l = 0, cmp = 0, i, count = 0;
+        i = m;
+        while (i > 0) {
+            i = i / 10;
+            l++;
+        }
+
+        double d = Math.pow(10, l);
+        int div = (int) d;
+        while (n > 0) {
+            cmp = n % div;
+            if (cmp == m) {
+                count++;
+            }
+            n = n / div;
+        }
+        return count;
+
     }
 }

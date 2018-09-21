@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class NambiarNumber {
+class Wipro_Nambiar_Number {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(nnGenerator(scanner.next()));

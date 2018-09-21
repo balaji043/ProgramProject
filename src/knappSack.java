@@ -1,7 +1,7 @@
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-public class knapSack {
+public class knappSack {
     public static void main(String[] args) {
         HouseStealing.houseStealingMain();
         BookFair.bookFairMain();

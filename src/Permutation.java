@@ -27,7 +27,6 @@ public class Permutation {
      *            <p>
      *            Swap Characters at position
      */
-
     private void permute(char[] str, int l, int r) {
         if (l == r)
             System.out.println(new String(str));
@@ -39,7 +38,6 @@ public class Permutation {
             }
         }
     }
-
     /**
      * Swap Characters at position
      *
@@ -55,7 +53,6 @@ public class Permutation {
         a[j] = temp;
         return a;
     }
-
     /**
      * permutation function that prints the smallest mul of n1 value
      *
