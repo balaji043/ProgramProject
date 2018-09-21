@@ -4,21 +4,22 @@ import java.util.Scanner;
 public class Anagram {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] a) {
-        isAnagram();
+    public static void main(String[] args) {
+        String a = scanner.next(), b = scanner.next();
+        if (isAnagram(a, b)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
     }
 
-    private static void isAnagram() {
-        char[] c1 = scanner.next().toCharArray(), c2 = scanner.next().toCharArray();
+    private static boolean isAnagram(String a, String b) {
+        char[] c1 = a.toCharArray(), c2 = b.toCharArray();
         Arrays.sort(c1);
         Arrays.sort(c2);
         String s1 = new String(c1);
         String s2 = new String(c2);
-        if (s1.equalsIgnoreCase(s2))
-            System.out.println("Anagram");
-        else
-            System.out.println("Not Anagram");
-
+        return s1.equalsIgnoreCase(s2);
     }
 
 }
