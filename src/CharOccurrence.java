@@ -6,12 +6,13 @@ public class CharOccurrence {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println(getCharOcurrence());
+        System.out.println(getCharOccurrence());
         System.out.println(FrequentCount());
         System.out.println(FrequentChar());
         expandAlphabetOccurrenceMain();
     }
-    private static int getCharOcurrence() {
+
+    private static int getCharOccurrence() {
         String s = scanner.next();
         char c = scanner.next().charAt(0);
         int n = scanner.nextInt(), l = s.length(), c1 = 0, c2 = 0, q = n / l, r = n % l;
