@@ -20,7 +20,6 @@ public class TCS_NUMBER_SORT_SPELL {
     };
     private static String[][] numb = new String[2][4];
     private static Scanner scanner = new Scanner(System.in);
-    private static int LIMIT = 99999;
     private static String outOfBounds="Out of bounds";
     public static void main(String[] args) {
         String a = scanner.next(), b = scanner.next();
@@ -34,6 +33,7 @@ public class TCS_NUMBER_SORT_SPELL {
     private static String numberSortSpell(String a, String b) {
         int n1 = Integer.parseInt(a), n2 = Integer.parseInt(b);
 
+        int LIMIT = 99999;
         if (n1 > LIMIT || n2 > LIMIT)
             return outOfBounds;
 
