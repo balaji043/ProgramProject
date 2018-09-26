@@ -20,6 +20,12 @@ class Time {
         System.out.println(TimeUnit.SECONDS.convert(System.nanoTime() - startTime, TimeUnit.MILLISECONDS));
     }
 
+    private static void calculte_Time() {
+        long startTime = System.nanoTime();
+        long endTime = System.nanoTime();
+        long totalTime = endTime - startTime;
+        System.out.println(TimeUnit.SECONDS.convert(totalTime, TimeUnit.MILLISECONDS));
+    }
     private static void setTime(int h, int m, int s) {
         hour = ((h >= 0 && h < 24) ? h : 0);
         minute = ((m >= 0 && m < 60) ? m : 0);

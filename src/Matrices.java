@@ -4,12 +4,11 @@ public class Matrices {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int n1 = 3, m1 = 3;
+        System.out.println("Enter Row and Column");
+        int n1 = scanner.nextInt(), m1 = scanner.nextInt();
+        System.out.println("Enter Matrix elements");
         int[][] a = get_Matrix(n1, m1);
-        int[][] r = matrix_Rotate(a, 90);
-        matrix_Print(r);
-        int[][] t = matrix_Rotate(a, 180);
-        matrix_Print(t);
+        matrix_Print(matrix_Rotate(a));
     }
 
     private static int[][] get_Matrix(int n, int m) {
@@ -23,7 +22,10 @@ public class Matrices {
         return a;
     }
 
-    private static int[][] matrix_Rotate(int[][] matrix, int deg) {
+
+    private static int[][] matrix_Rotate(int[][] matrix) {
+        System.out.println("Enter Degree");
+        int deg = scanner.nextInt();
         if (matrix == null) return null;
         int n = matrix.length, m = matrix[0].length;
         int[][] rotated = new int[n][m];
@@ -148,7 +150,8 @@ public class Matrices {
                         System.out.print(a[i][j] + " ");
                 }
             }
+
+            System.out.println();
         }
-        System.out.println();
     }
 }

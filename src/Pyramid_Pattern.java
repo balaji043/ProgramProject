@@ -4,9 +4,8 @@ public class Pyramid_Pattern {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        pyramidPattern();
-        pascalTriangle();
     }
+
 
     private static void pascalTriangle() {
     }

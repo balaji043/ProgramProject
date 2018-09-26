@@ -123,7 +123,7 @@ public class CharOccurrence {
     }
 
     private static int N2_Occurrence_in_N1_Count() {
-        int n = scanner.nextInt(), m = scanner.nextInt(), l = 0, cmp = 0, i, count = 0;
+        int n = scanner.nextInt(), m = scanner.nextInt(), l = 0, cmp, i, count = 0;
         i = m;
         while (i > 0) {
             i = i / 10;

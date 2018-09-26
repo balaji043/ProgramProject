@@ -18,8 +18,7 @@ class Queue_Using_Stacks {
         Enqueue(2);
         Enqueue(3);
         Dequeue();
-        Dequeue();
-        Dequeue();
+        Enqueue(4);
         Dequeue();
     }
 
@@ -38,6 +37,10 @@ class Queue_Using_Stacks {
                 stack2.push(p);
             }
             a = "Dequeue : " + stack2.pop();
+            while (!stack2.empty()) {
+                int p = stack2.pop();
+                stack1.push(p);
+            }
         }
         System.out.println(a);
     }

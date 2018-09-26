@@ -7,7 +7,15 @@ public class Main {
 
     public static void main(String args[]) {
         //regexFunctions();
-        System.out.println(LRU_Algorithm(3, Array.getArray()));
+        String s = scanner.next();
+        String s2 = scanner.next();
+        for (int i = 0; i < s.length(); i++) {
+            if (s2.equals(s)) {
+                System.out.println("Yes");
+                return;
+            }
+            s = s.substring(1) + s.charAt(0);
+        }
     }
 
     private static boolean isPrime(int n) {
@@ -26,8 +34,6 @@ public class Main {
         String a = Arrays.toString(Array.getArray());
         System.out.println(a);
         System.out.println(a.replaceAll("[\\[\\]][,]", ""));
-
-
     }
 
     private static int LRU_Algorithm(int size, int[] pages) {
