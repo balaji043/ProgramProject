@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.TreeSet;
-public class TimeGeneration {
+
+public class TCS_Time_Generation {
     private static Scanner scanner = new Scanner(System.in);
     private static int count = 1, n = 9, max = 0, countRev = 0;
     private static ArrayList<Integer> numbers = new ArrayList<>();
-    private static TreeSet<Integer> time = new TreeSet<Integer>();
+    private static TreeSet<Integer> time = new TreeSet<>();
 
     public static void main(String[] args) {
 
@@ -27,11 +28,11 @@ public class TimeGeneration {
         max = time.last();
         String hour = ("" + max);
         if (hour.length() == 1) {
-            numbers.remove(numbers.indexOf(max));
+            numbers.remove(max);
             hour = '0' + hour;
         } else {
-            numbers.remove(numbers.indexOf(max / 10));
-            numbers.remove(numbers.indexOf(max % 10));
+            numbers.remove(max / 10);
+            numbers.remove(max % 10);
         }
         return hour;
     }

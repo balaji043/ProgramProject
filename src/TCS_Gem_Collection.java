@@ -8,8 +8,8 @@ public class TCS_Gem_Collection {
     private static int[] memo = new int[100];
 
     public static void main(String[] args) {
+        Arrays.fill(memo, 0);
         for (int i = 0; i < t; i++) {
-            Arrays.fill(memo, 0);
             ans[i] = gemCollection(sc.nextInt());
         }
         for (int i = 0; i < t; i++) {
@@ -22,14 +22,11 @@ public class TCS_Gem_Collection {
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
-        int anas = recursion(a, n, 0, 0, 1);
-        return anas;
+        return recursion(a, n, 0, 0, 1);
     }
 
     private static int recursion(int a[], int n, int i, int count, int flag) {
-
-        int pick = 0, no = 0;
-
+        int pick = 0, no;
         if (i >= n)
             return 0;
         if (memo[i] != 0) {
@@ -60,8 +57,7 @@ public class TCS_Gem_Collection {
                 }
             }
         }
-        int l = pick > no ? pick : no;
 
-        return l;
+        return pick > no ? pick : no;
     }
 }
