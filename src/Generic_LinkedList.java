@@ -1,12 +1,12 @@
 class List<E> {
     E data;
-    List<E> next;
-    List<E> prev;
+    List next;
+    List prev;
 
     List(E data, List prev, List next) {
         this.data = data;
-        this.prev = prev;
         this.next = next;
+        this.prev = prev;
     }
 }
 
@@ -22,6 +22,7 @@ class Generic_LinkedList<E> {
 
     Generic_LinkedList(E data) {
         first = new List<>(data, null, null);
+        last = first;
         size = 1;
     }
 
@@ -29,7 +30,7 @@ class Generic_LinkedList<E> {
         add_at_last(data);
     }
 
-    void remove(E data) {
+    void remove() {
         del_at_end();
     }
 
@@ -50,15 +51,23 @@ class Generic_LinkedList<E> {
             first = new List<>(data, null, null);
             last = first;
         } else {
-            i = 0;
-            mid = size / 2;
+            i = 1;
+            mid = size / 2 + (size % 2);
             temp = first;
-            while (i < mid) {
+            for (i = 1; i < mid; i++) {
                 temp = temp.next;
-                i++;
             }
-            newNode = new List<>(data, temp, temp.next);
-            temp.next = newNode;
+            if (temp.next != null && temp.prev != null) {
+                newNode = new List<>(data, temp.prev, temp);
+                temp.prev.next = newNode;
+                temp.prev = newNode;
+            } else if (temp.prev != null) {
+                newNode = new List<>(data, temp.prev, temp);
+                newNode.prev.next = newNode;
+            } else {
+                newNode = new List<>(data, temp, temp.next);
+                temp.next = newNode;
+            }
         }
         size++;
     }
@@ -69,6 +78,7 @@ class Generic_LinkedList<E> {
             last = first;
         } else {
             newNode = new List<>(data, last, null);
+            last.next = newNode;
             last = newNode;
         }
         temp = null;
@@ -89,13 +99,10 @@ class Generic_LinkedList<E> {
         if (size == 0) {
             System.out.println("Not Possible");
         } else {
-            mid = size / 2;
+            mid = size / 2 + size % 2;
             i = 0;
             temp = first;
-            while (i < mid) {
-                temp = temp.next;
-                i++;
-            }
+            for (i = 1; i < mid; i++) temp = temp.next;
             temp.next = temp.next.next;
             temp.next.prev = temp;
             size--;
@@ -107,24 +114,30 @@ class Generic_LinkedList<E> {
             System.out.println("Not Possible");
         } else {
             last = last.prev;
-            last.prev.next = null;
+            last.next = null;
         }
         size--;
     }
 
     void reverse() {
-        List<E> temp = last;
+        temp = last;
         while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.prev;
         }
+        System.out.println();
     }
 
     void showAll() {
-        List<E> temp = first;
+        temp = first;
         while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
+        System.out.println();
+    }
+
+    int size() {
+        return size;
     }
 }

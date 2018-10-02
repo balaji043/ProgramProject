@@ -1,8 +1,6 @@
-
 public class My_LinkedList {
     public static void main(String[] a) {
         GenericList();
-        mainMethod();
     }
 
     private static void mainMethod() {
@@ -23,6 +21,21 @@ public class My_LinkedList {
     }
 
     private static void GenericList() {
-
+        Generic_LinkedList<Integer> list = new Generic_LinkedList<>(5);
+        list.add(6);
+        list.add_at_beg(1);
+        list.add_at_mid(3);
+        list.add(7);
+        list.add_at_beg(0);
+        list.add_at_mid(2);
+        list.showAll();
+        list.del_at_beg();
+        list.showAll();
+        list.del_at_mid();
+        list.showAll();
+        list.remove();
+        list.showAll();
+        list.reverse();
+        System.out.println(list.size());
     }
 }
