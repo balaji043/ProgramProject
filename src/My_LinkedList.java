@@ -1,9 +1,10 @@
 public class My_LinkedList {
     public static void main(String[] a) {
         GenericList();
+        NormalList();
     }
 
-    private static void mainMethod() {
+    private static void NormalList() {
         MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.insert_At_End(10);
         myLinkedList.insert_At_End(20);
@@ -19,7 +20,6 @@ public class My_LinkedList {
         myLinkedList.Display();
         System.out.println(myLinkedList.size());
     }
-
     private static void GenericList() {
         Generic_LinkedList<Integer> list = new Generic_LinkedList<>(5);
         list.add(6);
@@ -37,5 +37,7 @@ public class My_LinkedList {
         list.showAll();
         list.reverse();
         System.out.println(list.size());
+        Generic_LinkedList<String> a = new Generic_LinkedList<>();
+        System.out.println(a.size());
     }
 }
