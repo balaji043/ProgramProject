@@ -9,12 +9,11 @@ public class Permutation {
 
     public static void main(String[] args) {
         int n = str.length();
-        Permutation permutation = new Permutation();
         char[] array = str.toCharArray();
         Arrays.sort(array);
        // permutation.permute(array, 0, n - 1);
         System.out.println();
-        permutation.permuteMul(array, 0, n - 1);
+        permute(array, 0, n - 1);
         System.out.println(ans[0]);
 
     }
@@ -27,9 +26,10 @@ public class Permutation {
      *            <p>
      *            Swap Characters at position
      */
-    private void permute(char[] str, int l, int r) {
-        if (l == r)
+    private static void permute(char[] str, int l, int r) {
+        if (l == r) {
             System.out.println(new String(str));
+        }
         else {
             for (int i = l; i <= r; i++) {
                 str = swap(str, l, i);
@@ -46,7 +46,7 @@ public class Permutation {
      * @param j position 2
      * @return swapped string
      */
-    private char[] swap(char[] a, int i, int j) {
+    private static char[] swap(char[] a, int i, int j) {
         char temp;
         temp = a[i];
         a[i] = a[j];
@@ -62,7 +62,7 @@ public class Permutation {
      *           <p>
      *            Swap Characters at position
      */
-    private void permuteMul(char[] str, int l, int r) {
+    private static void permuteMul(char[] str, int l, int r) {
         String s = new String(str);
         if (l == r && Integer.parseInt(s) % n1 == 0){
             ans[j]=Integer.parseInt(s);
@@ -77,6 +77,4 @@ public class Permutation {
         }
     }
 }
-
-
 // This code is contributed by Mihir Joshi

@@ -14,20 +14,20 @@ public class Searching {
 }
 
 class Binary_Search {
-    private static int[] a;
-    private static int element;
+    private int[] a;
+    private int element;
 
     Binary_Search(int a[], int n, int element) {
-        Binary_Search.a = (new Quick_Sort(a, n)).a;
-        Binary_Search.element = element;
-        int result = Binary_Search.Search(0, n - 1);
+        this.a = (new Quick_Sort(a, n)).a;
+        this.element = element;
+        int result = this.Search(0, n - 1);
         if (result == -1)
             System.out.println("Element not present");
         else
             System.out.println("Element found at index " + result);
     }
 
-    private static int Search(int low, int high) {
+    private int Search(int low, int high) {
         if (low < high) {
             int mid = low + (high - low) / 2;
             if (a[mid] == element) return mid;
