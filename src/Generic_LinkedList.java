@@ -11,9 +11,10 @@ class List<E> {
 }
 
 class Generic_LinkedList<E> {
-    private transient List<E> first = null;
-    private transient List<E> last = null;
-    private transient List<E> temp = null, newNode = null;
+    private transient List first = null;
+    private transient List last = null;
+    private transient List temp = null;
+    private transient List<E> newNode = null;
     private transient int size, i, mid;
 
     Generic_LinkedList() {
@@ -86,6 +87,12 @@ class Generic_LinkedList<E> {
     }
 
     void del_at_beg() {
+        if (size == 1) {
+            first = null;
+            last = null;
+            size--;
+            return;
+        }
         if (first == null) {
             System.out.println("Empty List");
         } else {
@@ -96,6 +103,12 @@ class Generic_LinkedList<E> {
     }
 
     void del_at_mid() {
+        if (size == 1) {
+            first = null;
+            last = null;
+            size--;
+            return;
+        }
         if (size == 0) {
             System.out.println("Not Possible");
         } else {
@@ -110,6 +123,12 @@ class Generic_LinkedList<E> {
     }
 
     private void del_at_end() {
+        if (size == 1) {
+            first = null;
+            last = null;
+            size--;
+            return;
+        }
         if (size == 0) {
             System.out.println("Not Possible");
         } else {
@@ -139,5 +158,17 @@ class Generic_LinkedList<E> {
 
     int size() {
         return size;
+    }
+
+    boolean isEmpty() {
+        return size == 0;
+    }
+
+    Object getLast() {
+        return last.data;
+    }
+
+    Object getFirst() {
+        return first.data;
     }
 }

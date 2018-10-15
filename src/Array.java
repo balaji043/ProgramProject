@@ -10,6 +10,13 @@ class Array {
         return a;
     }
 
+    static int[] getArray(int n) {
+        Scanner scanner = new Scanner(System.in);
+        int a[] = new int[n];
+        for (int i = 0; i < n; i++)
+            a[i] = scanner.nextInt();
+        return a;
+    }
     static void printArray(int[] a, int n) {
         for (int i = 0; i < n; i++)
             System.out.print(a[i] + " ");

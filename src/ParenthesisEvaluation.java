@@ -26,9 +26,6 @@ public class ParenthesisEvaluation {
     }
 
     private static boolean matching(char c, Character last) {
-        if (c == '>' && last == '<') return true;
-        else if (c == ')' && last == '(') return true;
-        else if (c == '}' && last == '{') return true;
-        else return c == ']' && last == '[';
+        return (c == '>' && last == '<') || (c == ')' && last == '(') || (c == '}' && last == '{') || (c == ']' && last == '[');
     }
 }

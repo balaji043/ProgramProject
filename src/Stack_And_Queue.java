@@ -1,11 +1,12 @@
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 import java.util.Stack;
 
 public class Stack_And_Queue {
+    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        new Queue_Using_Stacks();
-        new Stack_Using_Queues();
+        new Stack_Using_List(scanner.nextInt());
     }
 }
 
@@ -78,5 +79,44 @@ class Stack_Using_Queues {
         System.out.println("pop  : " + queue1.remove());
         queue1 = queue2;
         queue2 = new LinkedList<>();
+    }
+}
+
+class Stack_Using_List {
+    Generic_LinkedList<Integer> linkedList;
+    int size, top;
+
+    Stack_Using_List(int size) {
+        linkedList = new Generic_LinkedList<>();
+        this.size = size;
+        top = 0;
+        push(10);
+        push(20);
+        push(30);
+        pop();
+        pop();
+        showAll();
+    }
+
+    private void showAll() {
+        linkedList.showAll();
+    }
+
+    private void push(int data) {
+        if (linkedList.size() >= size) {
+            System.out.println("pushing " + data + " Stack Overflow");
+            return;
+        }
+        System.out.println("Pushing " + data);
+        linkedList.add_at_beg(data);
+    }
+
+    private void pop() {
+        if (linkedList.isEmpty()) {
+            System.out.println("Stack UnderFlow");
+            return;
+        }
+        System.out.println("Popped " + linkedList.getFirst());
+        linkedList.del_at_beg();
     }
 }
