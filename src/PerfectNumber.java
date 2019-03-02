@@ -1,8 +1,9 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PerfectNumber {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Scanner bucky = new Scanner(System.in);
         int n = bucky.nextInt();
         for (int i = 1; i <= n; i++) {
@@ -12,7 +13,7 @@ public class PerfectNumber {
     }
 
     private static boolean isPerfect(int n) {
-        List<Integer> factors = getFactors(n);
+        ArrayList<Integer> factors = getFactors(n);
         int sum = 0;
         for (Integer a : factors) {
             sum += a;
@@ -20,8 +21,8 @@ public class PerfectNumber {
         return sum == n;
     }
 
-    private static List<Integer> getFactors(int a) {
-        List<Integer> ans = new ArrayList<>();
+    private static ArrayList<Integer> getFactors(int a) {
+        ArrayList<Integer> ans = new ArrayList<>();
         for (int i = 1; i <= a / 2; i++) {
             if (a % i == 0) {
                 ans.add(i);
