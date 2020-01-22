@@ -1,0 +1,31 @@
+Concept - Array Difficulty Level 3
+
+Create a class Certificates.Certificate with below attributes:
+
+int - id
+
+String - title
+
+String - date
+
+int - rank
+
+Make all the attributes private.Create corresponding getters and setters.
+
+Create a constructor which takes all parameters in the above sequence. The constructor should set the value of attributes to parameter values inside the constructor.
+
+Create a class Certificates.CertificateSolution with main method
+
+Create a static method getEvenPositionCertificate in the Certificates.CertificateSolution class.This method will take array of Certificates.Certificate objects. This method returns an array with all elements in even position.
+
+Create an array of 5 Certificates.Certificate objects in the main method
+Refer below sample main method and test the output:
+
+Call the above static method from the main method
+
+
+Output
+Displaying contents of result array: 
+60 cnexirk cbnifms 77 
+41 nfpxsmp vimiopu 89 
+39 yhzrafu itnbskb 44 

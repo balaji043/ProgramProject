@@ -1,0 +1,53 @@
+Concept - Array Difficulty Level 2
+
+Create a class MailBox with below attributes:
+
+int - id
+
+String - name
+
+String - creationDate
+
+Make all the attributes private.Create corresponding getters and setters.
+
+Create a constructor which takes all parameters in the above sequence. The constructor should set the value of attributes to parameter values inside the constructor.
+
+Create a class MailBoxDemo with main method
+
+Create the below static method sortMailBoxByCreationDate in the MailBoxDemo class.
+
+sortMailBoxByCreationDate(MailBox[] objArray)
+
+The method will sort the array based on creationDate and return the sorted array.
+
+Create an array of 5 MailBox objects in the main method
+Refer below sample main method and test the output:
+
+Call the above static method from the main method
+
+
+public class MailBoxDemo {
+public static void main(String args[]){
+MailBox mailbox1= new MailBox(66,"xiibrnp","twqjgvl");
+MailBox mailbox2= new MailBox(94,"wdgxzwr","pvixict");
+MailBox mailbox3= new MailBox(40,"xhetnxe","wvtmcwk");
+MailBox mailbox4= new MailBox(69,"abeshrf","mfdjwqq");
+MailBox mailbox5= new MailBox(92,"bhdeebj","oymobpe");
+
+
+MailBox[] objArray= {mailbox1,mailbox2,mailbox3,mailbox4,mailbox5};
+
+MailBox[] objArrayRes= sortMailBoxByCreationDate(objArray);
+System.out.println("Displaying contents of array: ");
+
+for(MailBox mailbox:objArray){
+System.out.println(mailbox.getId()+" " + mailbox.getName()+" " + mailbox.getCreationDate()+" ");
+}
+}}
+Output
+Displaying contents of array: 
+69 abeshrf mfdjwqq 
+92 bhdeebj oymobpe 
+94 wdgxzwr pvixict 
+66 xiibrnp twqjgvl 
+40 xhetnxe wvtmcwk 

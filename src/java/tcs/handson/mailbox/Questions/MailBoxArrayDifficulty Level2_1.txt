@@ -1,0 +1,73 @@
+Concept - Array Difficulty Level 2
+
+Create a class MailBox with below attributes:
+
+int - id
+
+String - name
+
+String - creationDate
+
+Make all the attributes private.Create corresponding getters and setters.
+
+Create a constructor which takes all parameters in the above sequence. The constructor should set the value of attributes to parameter values inside the constructor.
+
+Create a class MailBoxDemo with main method
+
+Create a static method replaceMailBoxById in the MailBoxDemo class. This method will take array of MailBox objects and one MailBox object as input. Replace the MailBox object with same id if found in the array and return true. Else return false
+
+Create an array of 5 MailBox objects in the main method
+Refer below sample main method and test the output:
+
+Call the above static method from the main method
+
+
+public class MailBoxDemo {
+public static void main(String args[]){
+MailBox mailbox1= new MailBox(22,"rsqhpiz","yjsympz");
+MailBox mailbox2= new MailBox(83,"xwjrqnu","ahrxtbb");
+MailBox mailbox3= new MailBox(47,"zgesjsr","cxnkctl");
+MailBox mailbox4= new MailBox(66,"xaosles","jvdrtxf");
+MailBox mailbox5= new MailBox(1,"yilxuua","ycnejof");
+
+
+MailBox[] objArray= {mailbox1,mailbox2,mailbox3,mailbox4,mailbox5};
+MailBox mailboxRes1= new MailBox(27,"ffatwgo","dkxgaid");
+
+boolean result= replaceMailBoxById(objArray, mailboxRes1);
+System.out.println("Output for performing replace on mailboxRes1 is: "+ result  );          
+
+System.out.println("Displaying contents of array: ");
+
+for(MailBox mailbox:objArray){
+System.out.println(mailbox.getId()+" " + mailbox.getName()+" " + mailbox.getCreationDate()+" ");
+}
+System.out.println();
+
+MailBox mailboxRes2= new MailBox(1,"hqzmrfz","fcbudyi");
+result= replaceMailBoxById(objArray, mailboxRes2);
+
+System.out.println("Output for performing replace on mailboxRes2 is: "+ result  );          
+
+System.out.println("Displaying contents of array: ");
+
+for(MailBox mailbox:objArray){
+System.out.println(mailbox.getId()+" " + mailbox.getName()+" " + mailbox.getCreationDate()+" ");
+}
+}}
+Output
+Output for performing replace on mailboxRes1 is: false
+Displaying contents of array: 
+22 rsqhpiz yjsympz 
+83 xwjrqnu ahrxtbb 
+47 zgesjsr cxnkctl 
+66 xaosles jvdrtxf 
+1 yilxuua ycnejof 
+
+Output for performing replace on mailboxRes2 is: true
+Displaying contents of array: 
+22 rsqhpiz yjsympz 
+83 xwjrqnu ahrxtbb 
+47 zgesjsr cxnkctl 
+66 xaosles jvdrtxf 
+1 hqzmrfz fcbudyi 

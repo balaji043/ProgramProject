@@ -1,0 +1,65 @@
+Concept - Array Difficulty Level 3
+
+Create a class Certificates.Certificate with below attributes:
+
+int - id
+
+String - title
+
+String - date
+
+int - rank
+
+Make all the attributes private.Create corresponding getters and setters.
+
+Create a constructor which takes all parameters in the above sequence. The constructor should set the value of attributes to parameter values inside the constructor.
+
+Create a class Certificates.CertificateSolution with main method
+
+Create the below static method searchCertificateByRank in the Certificates.CertificateSolution class.
+
+This method will take array of Certificates.Certificate objects and rank as input and returns new array of Certificates.Certificate objects for all values found with the given rank else return null if not found.
+
+Create an array of 5 Certificates.Certificate objects in the main method
+Refer below sample main method and test the output:
+
+Call the above static method from the main method
+
+
+public class Certificates.CertificateSolution {
+public static void main(String args[]){
+Certificates.Certificate certificate1= new Certificates.Certificate(98,"pflgqlv","eozatxv",21);
+Certificates.Certificate certificate2= new Certificates.Certificate(84,"ktewxch","agliblo",62);
+Certificates.Certificate certificate3= new Certificates.Certificate(94,"urlzbdv","vtnujet",40);
+Certificates.Certificate certificate4= new Certificates.Certificate(37,"icszoul","gpygijp",93);
+Certificates.Certificate certificate5= new Certificates.Certificate(51,"gfvevba","dvhjdfe",16);
+
+
+Certificates.Certificate[] objArray= {certificate1,certificate2,certificate3,certificate4,certificate5};
+
+Certificates.Certificate[] objResultArray1= searchCertificateByRank(objArray, 12);
+if(objResultArray1==null){
+System.out.println("Output after first search is null. ");
+}else{
+System.out.println("Displaying contents of result array: ");
+
+for(Certificates.Certificate certificate:objResultArray1){
+System.out.println(certificate.getId()+" " + certificate.getTitle()+" " + certificate.getDate()+" " + certificate.getRank()+" ");
+}
+}
+
+Certificates.Certificate[] objResultArray2= searchCertificateByRank(objArray, 40);
+if(objResultArray2==null){
+System.out.println("Output after first search is null. ");
+}else{
+System.out.println("Displaying contents of result array: ");
+
+for(Certificates.Certificate certificate:objResultArray2){
+System.out.println(certificate.getId()+" " + certificate.getTitle()+" " + certificate.getDate()+" " + certificate.getRank()+" ");
+}
+}
+}}
+Output
+Output after first search is null. 
+Displaying contents of result array: 
+94 urlzbdv vtnujet 40 
