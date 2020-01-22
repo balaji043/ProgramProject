@@ -1,0 +1,63 @@
+Concept - Array Difficulty Level 3
+
+Create a class MailBox with below attributes:
+
+int - id
+
+String - name
+
+String - creationDate
+
+Make all the attributes private.Create corresponding getters and setters.
+
+Create a constructor which takes all parameters in the above sequence. The constructor should set the value of attributes to parameter values inside the constructor.
+
+Create a class MailBoxDemo with main method
+
+Create the below static method searchMailBoxByName in the MailBoxDemo class.
+
+This method will take array of MailBox objects and name as input and returns new array of MailBox objects for all values found with the given name else return null if not found.
+
+Create an array of 5 MailBox objects in the main method
+Refer below sample main method and test the output:
+
+Call the above static method from the main method
+
+
+public class MailBoxDemo {
+public static void main(String args[]){
+MailBox mailbox1= new MailBox(30,"lsatkwk","ckbkape");
+MailBox mailbox2= new MailBox(38,"jbqeszs","tzxuuhz");
+MailBox mailbox3= new MailBox(22,"rpatwey","qkkjexb");
+MailBox mailbox4= new MailBox(80,"pfciraa","unafxwg");
+MailBox mailbox5= new MailBox(39,"ghohpje","fglxdpa");
+
+
+MailBox[] objArray= {mailbox1,mailbox2,mailbox3,mailbox4,mailbox5};
+
+MailBox[] objResultArray1= searchMailBoxByName(objArray, "hxrkvyu");
+if(objResultArray1==null){
+System.out.println("Output after first search is null. ");
+}else{
+System.out.println("Displaying contents of result array: ");
+
+for(MailBox mailbox:objResultArray1){
+System.out.println(mailbox.getId()+" " + mailbox.getName()+" " + mailbox.getCreationDate()+" ");
+}
+}
+
+MailBox[] objResultArray2= searchMailBoxByName(objArray, "lsatkwk");
+if(objResultArray2==null){
+System.out.println("Output after first search is null. ");
+}else{
+System.out.println("Displaying contents of result array: ");
+
+for(MailBox mailbox:objResultArray2){
+System.out.println(mailbox.getId()+" " + mailbox.getName()+" " + mailbox.getCreationDate()+" ");
+}
+}
+}}
+Output
+Output after first search is null. 
+Displaying contents of result array: 
+30 lsatkwk ckbkape 
