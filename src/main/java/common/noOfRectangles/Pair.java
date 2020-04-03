@@ -10,13 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Pair {
-    int i;
-    int j;
-
-    @Override
-    public boolean equals(Object obj) {
-        Pair pair = (Pair) obj;
-        return pair != null && this.i == pair.i && this.j == pair.j;
-    }
+    Point a;
+    Point b;
 
 }

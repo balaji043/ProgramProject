@@ -3,17 +3,20 @@ package common.noOfRectangles;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.util.Objects;
 
 @Setter
 @Getter
 @AllArgsConstructor
-@ToString
 public class Point {
     int x;
     int y;
+
+    @Override
+    public String toString() {
+        return "(" + x + "," + y + ')';
+    }
 
     @Override
     public boolean equals(Object obj) {
