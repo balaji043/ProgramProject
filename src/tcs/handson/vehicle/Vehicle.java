@@ -1,4 +1,3 @@
-package common.tcs.handson.vehicle;
 
 public class Vehicle {
     // Variables of Vehicle Class

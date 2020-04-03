@@ -1,4 +1,3 @@
-package common.tcs;
 
 import java.util.Scanner;
 

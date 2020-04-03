@@ -1,4 +1,4 @@
-package common;
+
 
 class NodeElement<E> {
     E data;

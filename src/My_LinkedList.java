@@ -1,4 +1,4 @@
-package common;
+
 
 public class My_LinkedList {
     public static void main(String[] a) {

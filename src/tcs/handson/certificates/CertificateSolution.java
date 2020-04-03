@@ -1,4 +1,3 @@
-package common.tcs.handson.certificates;
 
 public class CertificateSolution {
     public static void main(String[] args) {

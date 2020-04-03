@@ -1,4 +1,3 @@
-package common.tcs.handson.vehicle;
 
 import java.util.Arrays;
 import java.util.Scanner;

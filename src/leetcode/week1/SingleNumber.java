@@ -1,5 +1,3 @@
-package common.leetcode.week1;
-
 /**
  * Let us consider the above example. Let ^ be xor operator as in C and C++.
  * 

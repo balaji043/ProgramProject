@@ -1,4 +1,3 @@
-package common.tcs.handson.employee;
 
 public class EmployeeSolution {
     public static void main(String[] args) {

@@ -1,4 +1,3 @@
-package common.tcs.handson.mailbox;
 
 public class MailBox {
     private int id;

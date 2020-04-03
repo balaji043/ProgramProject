@@ -1,4 +1,3 @@
-package common.tcs.handson.books;
 
 public class Book {
     private String title;

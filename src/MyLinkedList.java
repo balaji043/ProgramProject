@@ -1,4 +1,4 @@
-package common;
+
 
 class Node {
     int data;

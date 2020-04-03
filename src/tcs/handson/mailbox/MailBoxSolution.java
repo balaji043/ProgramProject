@@ -1,4 +1,3 @@
-package common.tcs.handson.mailbox;
 
 public class MailBoxSolution {
 

@@ -1,5 +1,3 @@
-package common.tcs;
-
 import java.util.Scanner;
 
 public class TCS_Bacteria_infection {

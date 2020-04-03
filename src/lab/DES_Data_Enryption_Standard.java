@@ -1,4 +1,4 @@
-package common.lab;
+
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;

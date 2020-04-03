@@ -1,4 +1,3 @@
-package common.tcs.handson.documents;
 
 public class DocumentSolution {
 

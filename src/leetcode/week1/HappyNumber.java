@@ -1,5 +1,3 @@
-package common.leetcode.week1;
-
 public class HappyNumber {
     public static void main(String[] args) {
         System.out.println(isHappyNumber(20));
@@ -12,8 +10,8 @@ public class HappyNumber {
         do {
             slow = findDigitSquareSum(slow);
             fast = findDigitSquareSum(findDigitSquareSum(fast));
-        } while (slow == fast);
-        
+        } while (slow != fast);
+
         return slow == 1;
     }
 

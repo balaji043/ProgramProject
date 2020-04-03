@@ -1,4 +1,3 @@
-package common.tcs;
 
 public class Producer {
     public boolean isServicingAgent;

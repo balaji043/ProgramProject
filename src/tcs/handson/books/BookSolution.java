@@ -1,4 +1,3 @@
-package common.tcs.handson.books;
 
 import java.util.Scanner;
 

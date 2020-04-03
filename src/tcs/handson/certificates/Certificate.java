@@ -1,4 +1,3 @@
-package common.tcs.handson.certificates;
 
 public class Certificate {
     private int id;

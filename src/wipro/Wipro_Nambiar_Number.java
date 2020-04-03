@@ -1,4 +1,4 @@
-package common.wipro;
+
 
 import java.util.Scanner;
 

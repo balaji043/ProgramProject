@@ -1,4 +1,3 @@
-package common.tcs.handson.employee;
 
 public class Employee implements Comparable<Employee> {
     private String name;

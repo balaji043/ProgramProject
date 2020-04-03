@@ -1,4 +1,3 @@
-package common.tcs.handson;
 
 import common.tcs.Producer;
 import common.tcs.handson.employee.Employee;
