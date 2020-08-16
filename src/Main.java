@@ -1,11 +1,7 @@
-
-
-import java.util.Scanner;
-
-public class Main {
+class MainMain {
 
     public static void main(String[] args) {
-       
+
     }
 
 }

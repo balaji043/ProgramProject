@@ -1,17 +1,18 @@
-package common.noOfRectangles;
+package noOfRectangles;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+
 
 import java.util.Objects;
 
-@Setter
-@Getter
-@AllArgsConstructor
+
 public class Point {
     int x;
     int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
 
     @Override
     public String toString() {

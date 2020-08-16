@@ -1,3 +1,5 @@
+package noOfRectangles;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -6,10 +8,8 @@ import java.util.Map;
 public class NoOfRectanglesMain {
     public static void main(String[] args) {
         int m = 3, n = 3;
-        List<Point> point1 = new ArrayList<>();
         List<Point> points2 = new ArrayList<>();
 
-        int k = 1;
 //        for (int i = 0; i < m; i++) {
 //            for (int j = 0; j < n; j++) {
 //                Point p = new Point(i, j);
@@ -49,7 +49,7 @@ public class NoOfRectanglesMain {
                 if (!point.equals(pointAbove) && point.x != pointAbove.x && point.y != pointAbove.y) {
                     String pair = "" + (pointAbove.x - point.x) + " " + (pointAbove.y - point.y);
                     Pair currentPair = new Pair(point, pointAbove);
-                    List<Pair> pairs = null;
+                    List<Pair> pairs;
                     if (pairList.containsKey(pair)) {
                         pairs = pairList.get(pair);
                     } else {

@@ -1,16 +1,11 @@
-package common.noOfRectangles;
+package noOfRectangles;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class Pair {
     Point a;
     Point b;
 
+    public Pair(Point a, Point b) {
+        this.a = a;
+        this.b = b;
+    }
 }
